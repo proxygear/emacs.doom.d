@@ -34,7 +34,7 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
-(setq projectile-project-search-path '("~/Projects/"))
+(setq projectile-project-search-path '("~/Projects/" "~/Projects/wagons/"))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -52,3 +52,14 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
+
+;; Change binding for mac
+(setq mac-option-key-is-meta t)
+(setq mac-right-option-modifier nil)
+
+;;Update web-mode indentation
+(use-package web-mode
+  :custom
+  (web-mode-markup-indent-offset 2)
+  (web-mode-css-indent-offset 2)
+  (web-mode-code-indent-offset 2))
